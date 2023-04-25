@@ -1,0 +1,286 @@
+&-four {
+	position: relative;
+	padding: 155px 0 120px;
+	background-color: var(--lightgreen-bg);
+	overflow: hidden;
+	margin: -100px 0 0;
+	z-index: 0;
+
+	@media screen and (max-width: 768px) {
+		margin: 0;
+		padding: 100px 0;
+	}
+
+	@media screen and (max-width: 580px) {
+		padding: 60px 0;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding: 60px 0 40px;
+	}
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		box-sizing: border-box;
+		width: 120%;
+		height: calc(1vw * 30);
+		background-color: transparent;
+		border-radius: 100% 100% 100% 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		background-color: var(--dirtywhite-bg);
+	}
+	&::before {
+		top: calc(1vw * -23);
+	}
+
+	&::after {
+		bottom: calc(1vw * -23);
+	}
+
+	.composition {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&__item {
+			position: relative;
+			display: flex;
+			width: 100%;
+			border-radius: 20px;
+			box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+			margin: 20px 0;
+			background-color: var(--comp-lightgreen-bg);
+			overflow: hidden;
+
+			@media screen and (max-width: 768px) {
+				max-width: 450px;
+			}
+
+			&-content {
+				padding: 50px 37px;
+				width: 50%;
+				z-index: 1;
+
+				@media screen and (max-width: 768px) {
+					width: 100%;
+					padding: 200px 25px 20px;
+				}
+
+				@media screen and (max-width: 480px) {
+					width: 100%;
+					padding: 150px 25px 20px;
+				}
+			}
+
+			&-title {
+				font-size: var(--comp-title);
+				font-weight: 700;
+				margin-top: 0;
+				margin-bottom: 5px;
+			}
+
+			&-subtitle {
+				font-size: var(--comp-subtitle);
+			}
+
+			&-text {
+				font-size: var(--regular-text);
+				font-weight: 400;
+				margin-bottom: 0;
+			}
+
+			&:first-child {
+				justify-content: flex-end;
+				background-color: var(--comp-lightgreen-bg);
+
+				&::before {
+					position: absolute;
+					width: 50%;
+					height: 100%;
+					content: "";
+					top: 0;
+					left: 0;
+					right: 50%;
+					bottom: 0;
+					background-image: linear-gradient(270deg, #f8ffc5 0%, rgba(255, 255, 255, 0) 20%),
+						url(../img/fourth/comp-1.jpg);
+					background-position: right -2px top 0, center;
+					background-size: 100% 100%, cover;
+					background-repeat: no-repeat;
+
+					@media screen and (max-width: 768px) {
+						width: 100%;
+						height: 60%;
+						top: -2px;
+						left: 0;
+						right: 0;
+						bottom: 50%;
+						background-image: linear-gradient(0deg, #f8ffc5 0%, rgba(255, 255, 255, 0) 50%),
+							url(../img/fourth/comp-1.jpg);
+						background-position: left 0 bottom -1px, center;
+						background-size: 100% 100%, cover;
+					}
+
+					@media screen and (max-width: 480px) {
+						height: 50%;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				justify-content: flex-start;
+				background-color: var(--light-color);
+
+				&::before {
+					position: absolute;
+					width: 50%;
+					height: 100%;
+					content: "";
+					top: 0;
+					left: 50%;
+					right: -2px;
+					bottom: 0;
+					background-image: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 20%), url(../img/fourth/comp-2.jpg);
+					background-position: left 0 top 0, center;
+					background-size: 100% 100%, cover;
+					background-repeat: no-repeat;
+
+					@media screen and (max-width: 768px) {
+						width: 100%;
+						height: 60%;
+						top: -2px;
+						left: 0;
+						right: 0;
+						bottom: 50%;
+						background-image: linear-gradient(0deg, #fff 0%, #fff 5%, rgba(255, 255, 255, 0) 50%),
+							url(../img/fourth/comp-2.jpg);
+						background-position: left 0 bottom -1px, center;
+						background-size: 100% 100%, cover;
+					}
+
+					@media screen and (max-width: 480px) {
+						height: 50%;
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				justify-content: flex-end;
+				background-color: var(--comp-lightbrown-bg);
+
+				&::before {
+					position: absolute;
+					width: 50%;
+					height: 100%;
+					content: "";
+					top: 0;
+					left: 0;
+					right: 50%;
+					bottom: 0;
+					background-image: linear-gradient(270deg, var(--comp-lightbrown-bg) 0%, rgba(255, 255, 255, 0) 20%),
+						url(../img/fourth/comp-3.jpg);
+					background-position: right -2px top 0, center;
+					background-size: 100% 100%, cover;
+					background-repeat: no-repeat;
+
+					@media screen and (max-width: 768px) {
+						width: 100%;
+						height: 60%;
+						top: -2px;
+						left: 0;
+						right: 0;
+						bottom: 50%;
+						background-image: linear-gradient(0deg, var(--comp-lightbrown-bg) 0%, rgba(255, 255, 255, 0) 40%),
+							url(../img/fourth/comp-3.jpg);
+						background-position: left 0 bottom -1px, center;
+						background-size: 100% 100%, cover;
+					}
+
+					@media screen and (max-width: 480px) {
+						height: 50%;
+					}
+				}
+			}
+
+			&:nth-child(4) {
+				justify-content: flex-start;
+				background-color: var(--light-color);
+
+				&::before {
+					position: absolute;
+					width: 50%;
+					height: 100%;
+					content: "";
+					top: 0;
+					left: 50%;
+					right: 0;
+					bottom: 0;
+          background-image: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 40%),
+          url(../img/fourth/comp-4.jpg);
+        background-position: left 0 bottom 0, center;
+        background-size: 100% 100%, cover;
+					background-repeat: no-repeat;
+
+					@media screen and (max-width: 768px) {
+						width: 100%;
+						height: 60%;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 50%;
+            background-image: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 40%),
+            url(../img/fourth/comp-4.jpg);
+          background-position: left 0 bottom -1px, center;
+          background-size: 100% 100%, cover;
+					}
+
+					@media screen and (max-width: 480px) {
+						height: 50%;
+					}
+				}
+			}
+
+			&:last-child {
+				justify-content: flex-end;
+				background-color: var(--comp-lightgreen-bg);
+
+				&::before {
+					position: absolute;
+					width: 50%;
+					height: 100%;
+					content: "";
+					top: 0;
+					left: 0;
+					right: 50%;
+					bottom: 0;
+					background-image: linear-gradient(270deg, var(--comp-lightgreen-bg) 0%, rgba(255, 255, 255, 0) 20%),
+						url(../img/fourth/comp-5.jpg);
+					background-position: right -2px top 0, center;
+					background-size: 100% 100%, cover;
+					background-repeat: no-repeat;
+
+					@media screen and (max-width: 768px) {
+						width: 100%;
+						height: 60%;
+						top: -2px;
+						left: 0;
+						right: 0;
+						bottom: 50%;
+						background-image: linear-gradient(0deg, var(--comp-lightgreen-bg) 0%, rgba(255, 255, 255, 0) 50%),
+							url(../img/fourth/comp-5.jpg);
+						background-position: left 0 bottom -1px, center;
+						background-size: 100% 100%, cover;
+					}
+
+					@media screen and (max-width: 480px) {
+						height: 50%;
+					}
+				}
+			}
+		}
+	}
+}

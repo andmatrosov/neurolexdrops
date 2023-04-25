@@ -1,0 +1,164 @@
+// Form
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--light-color);
+  border-radius: 20px;
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.25);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.04em;
+  z-index: 3;
+
+  &-small {
+    max-width: 380px;
+    padding: 25px 20px;
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      max-width: 320px;
+    }
+  }
+
+  &-big {
+    max-width: 538px;
+    padding: 25px 60px;
+    margin-top: -100px;
+
+    @media screen and (max-width: 1200px) {
+      margin-top: -130px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      padding: 25px 20px;
+    }
+  }
+
+  &-title {
+    font-family: "Roboto Con", sans-serif;
+    font-size: var(--form-title);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+
+    span {
+      margin-top: 5px;
+      display: block;
+      font-weight: 800;
+      font-size: var(--form-subtitle);
+      font-style: italic;
+      color: var(--red-color);
+    }
+  }
+
+  &-footnote {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 10px;
+  }
+
+  .price-block {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 12px 8%;
+    border: 1px dashed var(--red-color);
+    margin: 20px 0;
+
+    .price_old {
+      text-decoration: line-through;
+      margin-right: 5px;
+      font-size: 14px;
+      line-height: 1.8;
+      white-space: nowrap;
+    }
+
+    .price_new {
+      font-size: 36px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-style: italic;
+      white-space: nowrap;
+      position: relative;
+
+      &::after {
+        content: '*';
+        position: absolute;
+        top: 0;
+        font-size: 30px;
+      }
+
+      @media screen and (min-width: 769px) and (max-width: 890px) {
+        font-size: calc(1vw * 3.3);
+      }
+
+      @media screen and (max-width: 425px) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .price-description {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #BB4625;
+    margin-bottom: 20px;
+  }
+
+  .input-block {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    label {
+      margin-top: 10px;
+      font-size: var(--input-text);
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      background-color: var(--input-bg);
+      border-radius: 10px;
+      border: none;
+
+      font-size: var(--input-text);
+      padding: 16px;
+      margin-top: 10px;
+
+      font-weight: 300;
+      font-style: italic;
+
+      *::-webkit-input-placeholder {
+        color: var(--placeholder-color);
+      }
+
+      *::-moz-placeholder {
+        color: var(--placeholder-color);
+      }
+
+      *:-ms-input-placeholder {
+        color: var(--placeholder-color);
+      }
+
+      *::-ms-input-placeholder {
+        color: var(--placeholder-color);
+      }
+
+      *::placeholder {
+        color: var(--placeholder-color);
+      }
+    }
+  }
+}

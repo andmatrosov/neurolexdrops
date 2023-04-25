@@ -1,0 +1,101 @@
+@import "vendor/normalize";
+@import "fonts";
+@import "vars";
+@import "components";
+@import "form";
+
+// Settings
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  &__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 1190px) {
+    padding: 0 10px;
+  }
+}
+
+// Settings
+
+.centered {
+  text-align: center;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.my-40 {
+  margin: 40px 0;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+// Main
+.header {
+  padding: 18px 0;
+  background-color: var(--green-bg);
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-text {
+    flex-shrink: 1;
+    font-size: var(--header-text);
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--light-color);
+    letter-spacing: 0.04em;
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 10px 0;
+  }
+}
+
+.section {
+  position: relative;
+  padding: 50px 0 100px;
+
+  @import "sections/section-one";
+  @import "sections/section-two";
+  @import "sections/section-three";
+  @import "sections/section-four";
+  @import "sections/section-five";
+  @import "sections/section-six";
+  @import "sections/section-seven";
+  @import "sections/section-eight";
+}

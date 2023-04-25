@@ -1,0 +1,78 @@
+:root {
+	// Text
+	--black-color: #000;
+	--light-color: #fff;
+	--green-color: #27700b;
+	--darkgreen-color: #0f3501;
+	--orange-color: #ec5600;
+	--placeholder-color: #acb19c;
+	--red-color: #d42323;
+	--darkgreen-color: #0f3501;
+	--blue-color: #1b537b;
+	--order-accent-color: #6bba3a;
+
+	// Bg
+	--green-bg: #4f803d;
+	--light-bg: #eaedda;
+	--input-bg: #f9f6ee;
+	--lightgreen-bg: #c2d5ae;
+	--limegrenn-bg: #c4f14c;
+	--lightblue-bg: #cfe1ee;
+	--dirtywhite-bg: #F8F9F2;
+
+	--comp-lightgreen-bg: #f8ffc5;
+	--comp-lightbrown-bg: #ffefc1;
+
+	// Font sizes
+
+	// HEADERS
+	--main-header: min(max(7vw, 40px), 74px);
+	--section-header: min(max(4vw, 20px), 40px);
+	--form-title: min(max(3vw, 20px), 24px);
+	--form-title-big: min(max(3vw, 20px), 32px);
+	--form-subtitle: min(max(3vw, 28px), 38px);
+	--comp-title: min(max(2vw, 16px), 24px);
+	--comp-subtitle: min(max(2vw, 15px), 20px);
+
+	@media screen and (max-width: 1080px) and (min-width: 768px) {
+		--form-title: min(max(2.1vw, 16px), 24px);
+	}
+
+	// SUBTITLES
+	--main-subtitle: min(max(2.3vw, 16px), 24px);
+
+	// CARDS
+	--redcards-text: min(max(2.3vw, 12px), 24px);
+
+	// LISTS
+	--list-text: min(max(2.3vw, 14px), 20px);
+	--list-banner-text: min(max(2vw, 16px), 24px);
+
+	@media screen and (max-width: 380px) {
+		--list-banner-text: min(max(1vw, 15px), 24px);
+	}
+
+	// FORM
+	--input-text: min(max(2vw, 16px), 20px);
+
+	// BUTTONS
+	--main-btn-text: min(max(2vw, 20px), 24px);
+	--header-btn-text: min(max(2vw, 12px), 20px);
+
+	// TEXT
+	--header-text: min(max(1.65vw, 10px), 18px);
+	--regular-text: min(max(2vw, 14px), 20px);
+	--attent-text: min(max(2vw, 16px), 24px);
+	--oreder-text: min(max(2vw, 24px), 28px);
+
+	// ICONS
+	--check-icon-size: 28px;
+
+	@media screen and (max-width: 768px) {
+		--check-icon-size: 24px;
+	}
+
+	@media screen and (max-width: 380px) {
+		--oreder-text: min(max(2vw, 23px), 28px);
+	}
+}

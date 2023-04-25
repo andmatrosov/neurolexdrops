@@ -1,0 +1,32 @@
+&-eight {
+  background: linear-gradient(180deg, #A1BB5E -29.67%, var(--green-bg) 100%), var(--green-bg);
+  padding-bottom: 50px;
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .privacy {
+    margin-top: 1rem;
+
+    &__link {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  
+  &::before {
+    position: absolute;
+    content: "";
+    box-sizing: border-box;
+    width: 120%;
+    height: calc(1vw * 30);
+    background-color: transparent;
+    border-radius: 100% 100% 100% 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dirtywhite-bg);
+    top: calc(1vw * -23);
+  }
+}
